@@ -1,11 +1,12 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-function Layout(prop) {
+function Layout() {
   
-  prop.map((item)=>
-   console.log(item)
-  )
+  let a=5;
+  let b=8;
+  console.log(a,b)
+ 
   return (
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src="" />
