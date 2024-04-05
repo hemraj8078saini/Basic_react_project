@@ -3,12 +3,15 @@
 // import viteLogo from '/vite.svg'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter as Routes,Router, Route } from 'react-router-dom';
 
 import "./App.css";
 import "./components/About";
 import "./components/Card";
 import "./components/Layout";
-import {login} from "./login.jsx"
+import Signup from "./Signup";
+import Navbar from "./Navbar";
+// import {login} from "./login.jsx"
 // import About from "./components/About";
 // import { Card } from "react-bootstrap";
 // import Navbar from "./components/Navbars";
@@ -29,10 +32,12 @@ function App() {
   // },[])
   return (
     <>
-      <h1 className="text-3xl font-bold underline border-8 alert-danger  m-5 bg-primary p-5 ">
-        Hello world!
-      </h1>
-      <login/>
+    <Navbar />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Signup />} />
+        </Routes>
+      </Router>
     </>
   );
 }
